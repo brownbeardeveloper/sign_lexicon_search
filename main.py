@@ -19,11 +19,11 @@ def main():
         store.save(index_dir)
 
     while True:
-        query = input("\nSök: ").strip()
+        query = input("\nSearch: ").strip()
         if not query:
             break
 
-        results = store.search(query, k=3)
+        results = store.search(query, k=5)
         for r in results:
             subject = r["main_subject"]
             if r["sub_subject"]:

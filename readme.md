@@ -1,10 +1,11 @@
+## Branches
+`main` - same as `version_0_1` (stable)
+`version_0_1` - version 0.1 branch (faiss and sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
+`version_0_2` - version 0.2 branch (ongoing)
+
 ## Configuration
 
-Check `config.yml` for configuration.
-
-## Dataset and embeddings
-
-We are using FAISS as the vector database and sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 as the embedding model.
+Check `config.yml` for current configuration and model details.
 
 
 ## To run this vector database
@@ -17,6 +18,9 @@ mamba run -n vector_db python main.py
 
 
 ## Dataset structure
+
+**Good to know**: To get this project running, you need to download the dataset. Let me know if you need help with that.
+
 
 Each entry in `dataset/signs.json` represents a sign language word:
 
@@ -38,7 +42,7 @@ Each entry in `dataset/signs.json` represents a sign language word:
     }
   ],
   "scraper_url": "https://example.com/word/1",
-  "scraper_fetched_at": "2026-02-19T13:39:41.938156Z"
+  "scraper_fetched_at": "2000-01-01T00:00:00"
 },
 ...
 ```

@@ -1,0 +1,12 @@
+name: vector_db
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - sentence-transformers
+      - faiss-cpu
+      - numpy
+      - pyyaml

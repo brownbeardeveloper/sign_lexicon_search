@@ -1,0 +1,14 @@
+Config:
+  version: "0.0.1"
+  description: "Configuration file for the VectorDB project"
+
+Database:
+  model_name: "faiss"
+  index_filename: "faiss.index"
+  metadata_filename: "faiss_metadata.json"
+
+Embedding:
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
+VectorStore:
+  index_dir: "data"

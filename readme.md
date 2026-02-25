@@ -1,11 +1,17 @@
 ## Branches
+
 `main` - same as `version_0_1` (stable)
 
-`version_0_1` - version 0.1 branch (faiss and sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
+`version_0_1` - version 0.1 branch (faiss & paraphrase-multilingual-MiniLM-L12-v2)
 
-`version_0_2` - version 0.2 branch (faiss and KBLab/sentence-bert-swedish-cased)
+`version_0_2` - version 0.2 branch (faiss & sentence-bert-swedish-cased)
 
 `version_0_3` - version 0.3 branch (ongoing)
+
+## Ranking of BERT Models
+
+1. `version_0_2` - KBLab/sentence-bert-swedish-cased
+2. `version_0_1` - SentenceTransformers/paraphrase-multilingual-MiniLM-L12-v2
 
 ## Configuration
 

@@ -1,5 +1,5 @@
 Config:
-  version: "0.1"
+  version: "0.2"
   description: "Configuration file for the VectorDB project"
 
 Database:
@@ -8,7 +8,7 @@ Database:
   metadata_filename: "faiss_metadata.json"
 
 Embedding:
-  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  model_name: "KBLab/sentence-bert-swedish-cased"
 
 VectorStore:
   index_dir: "data"

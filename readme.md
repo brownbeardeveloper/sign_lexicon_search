@@ -1,20 +1,22 @@
 ## Branches
 
-`main` - same as `version_0_1` (stable)
+`main` - same as `version_0_3` (best of 4 models)
 
 `version_0_1` - version 0.1 branch (faiss & paraphrase-multilingual-MiniLM-L12-v2)
 
 `version_0_2` - version 0.2 branch (faiss & sentence-bert-swedish-cased)
 
-`version_0_3` - version 0.3 branch (faiss & sentence-transformers/all-MiniLM-L6-v2)
+`version_0_3` - version 0.3 branch (faiss & all-MiniLM-L6-v2)
 
-`version_0_4` - version 0.4 branch (ongoing)
+`version_0_4` - version 0.4 branch (faiss & mmBERT-base)
 
 ## Ranking of BERT Models
 
 1. `version_0_3` - sentence-transformers/all-MiniLM-L6-v2
-2. `version_0_2` - KBLab/sentence-bert-swedish-cased
-3. `version_0_1` - SentenceTransformers/paraphrase-multilingual-MiniLM-L12-v2
+2. `version_0_4` - jhu-clsp/mmBERT-base
+3. `version_0_2` - KBLab/sentence-bert-swedish-cased
+4. `version_0_1` - SentenceTransformers/paraphrase-multilingual-MiniLM-L12-v2
+
 
 ## Configuration
 

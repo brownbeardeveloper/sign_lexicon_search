@@ -12,3 +12,11 @@ Embedding:
 
 VectorStore:
   index_dir: "data"
+
+LLM:
+  base_url: "http://localhost:11434"
+  model: "phi4:latest"
+  temperature: 0.2
+  top_p: 0.85
+  max_tokens: 512
+  timeout: 120

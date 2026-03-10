@@ -10,3 +10,6 @@ dependencies:
       - faiss-cpu
       - numpy
       - pyyaml
+      - fastapi
+      - pydantic
+      - uvicorn

@@ -1,4 +1,5 @@
 import json
+import re
 import faiss
 from pathlib import Path
 
@@ -107,4 +108,27 @@ class VectorStore:
         for rank, entry in enumerate(combined, start=1):
             entry["rank"] = rank
             results.append(entry)
+        return results
+
+    def search_sentence(self, sentence: str, k: int = 5, base_forms: list[str] | None = None) -> dict[str, list[dict]]:
+        """Search for a sentence: try the full phrase first, fall back to individual words."""
+        cleaned = re.sub(r"[^\w\såäöÅÄÖ]", "", sentence).strip().lower()
+        if not cleaned:
+            return {}
+
+        # Try full phrase first
+        full_results = self.search(cleaned, k=k)
+        has_exact = any(r.get("distance") == 1.0 for r in full_results)
+
+        if has_exact:
+            return {cleaned: full_results}
+
+        # Use LLM base forms if available, otherwise raw split
+        words = base_forms if base_forms else cleaned.split()
+        if len(words) <= 1:
+            return {cleaned: full_results}
+
+        results: dict[str, list[dict]] = {}
+        for word in words:
+            results[word] = self.search(word, k=k)
         return results
